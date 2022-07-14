@@ -20,7 +20,7 @@ export const BtnDefaultIcons = styled.button`
 
     .center{
         text-align: center;
-        width:100%
+        width:100%;
     }
 
     img {

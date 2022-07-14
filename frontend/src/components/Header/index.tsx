@@ -2,7 +2,7 @@ import React from "react";
 import { AreaHeader } from './styled';
 import { Link } from 'react-router-dom';
 
-function Header(){
+function Header(props: { user: { avatar: any; name: string; }; }){
     return (
         <AreaHeader>
             <div className="container">
@@ -16,8 +16,13 @@ function Header(){
                     <ul>
                         <li><Link to="/film">Filmes</Link></li>
                         <li><Link to="/actionfig">Action Figures</Link></li>
-                        <li><Link to="/logout">Sair</Link></li>
+                        <li><Link to="/">Sair</Link></li>
                     </ul>
+
+                    <div className="avatar">
+                        <img src ={props.user.avatar} />
+                        <label>{props.user.name}</label>
+                    </div>
                 </nav>
             </div>
         </AreaHeader>

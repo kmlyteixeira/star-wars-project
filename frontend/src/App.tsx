@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -11,26 +11,38 @@ import Routes from './Routes';
 
 function App() {
 
-  const [user, setUser] = useState({
-    id: 1,
-    name: 'Kemily',
-    avatar: ''
-  });
+  interface newUser {
+    id: any,
+    name: any,
+    avatar: any
+  }
+
+  const [user, setUser] = useState< newUser | null>(null);
   /*{
     id: 1,
     name: 'Kemily',
     avatar: ''
   }*/
 
+  const actionLoginDataGoogle = async (u: { id: any; displayName: any; photoURL: any; }) => {
+    let newUser = {
+      id: u.id,
+      name: u.displayName,
+      avatar: u.photoURL
+    }
+    
+    setUser(newUser);
+  }
+
   if(user === null){
     return (
-      <Login />
+      <Login onReceiveGoogle={actionLoginDataGoogle} />
     );
   }
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header user={user}/>
       <Routes></Routes>
 
       <Footer />

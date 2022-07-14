@@ -12,8 +12,23 @@ export const AreaLogin = styled.div`
     box-shadow: 0px 0px 10px #CCC;
 
     h1 {
-        font-size: 24px;
+        font-size: 25px;
+    }
+
+    .return{
+        display: flex;
+        font-size: 25px;
+
+        img {
+            width: 15px; 
+            margin-right: 20px;
+        };
     };
+
+    p {
+        font-size: 12px;
+        color: #808080;
+    }
 
     .form--input {
         text-align: left;

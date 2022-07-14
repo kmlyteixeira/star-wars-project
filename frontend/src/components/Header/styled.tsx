@@ -26,6 +26,8 @@ export const AreaHeader = styled.div`
             }
         }
         nav {
+            display: flex;
+
             ul {
                 display: flex;
             }
@@ -40,6 +42,31 @@ export const AreaHeader = styled.div`
 
                     &: hover{
                         color: #FCA311; 
+                    }
+                }
+            }
+
+            .avatar {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 35px;
+                    border-radius: 20px;
+                    margin-right: 10px;
+                    margin-left: 20px;
+                    cursor: pointer;
+                }
+
+                label {
+                    font-size: 14px;
+                    cursor: pointer;
+                    color: white;
+                }
+
+                @media screen and (max-width: 600px){
+                    label {
+                        display: none;
                     }
                 }
             }
