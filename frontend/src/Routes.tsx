@@ -2,8 +2,8 @@ import React from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Film from './pages/Film';
 import ActionFig from './pages/ActionFig';
+import Movies from "./pages/Movies";
 
 export default () => {
 
@@ -11,7 +11,7 @@ export default () => {
         <Routes>
             <Route path="/" element = {<Home />} />
             <Route path="/ActionFig" element = {<ActionFig />} />
-            <Route path="/Film" element = {<Film />} />
+            <Route path="/Movies" element = {<Movies />} />
         </Routes>
     );
 }

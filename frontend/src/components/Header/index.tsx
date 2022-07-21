@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AreaHeader } from './styled';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ function Header(props: { user: { avatar: any; name: string; }; }){
                 </div>
                 <nav>
                     <ul>
-                        <li><Link to="/film">Filmes</Link></li>
+                        <li><Link to="/movies">Filmes</Link></li>
                         <li><Link to="/actionfig">Action Figures</Link></li>
                         <li><Link to="/">Sair</Link></li>
                     </ul>
@@ -30,3 +30,4 @@ function Header(props: { user: { avatar: any; name: string; }; }){
 }
 
 export default Header;
+
