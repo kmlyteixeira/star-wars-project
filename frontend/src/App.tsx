@@ -1,11 +1,9 @@
-import React, { useState, FC } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import Login from './pages/Login';
-
 import './App.css';
 import Routes from './Routes';
 
@@ -18,11 +16,6 @@ function App() {
   }
 
   const [user, setUser] = useState< newUser | null>(null);
-  /*{
-    id: 1,
-    name: 'Kemily',
-    avatar: ''
-  }*/
 
   const actionLoginDataGoogle = async (u: { id: any; displayName: any; photoURL: any; }) => {
     let newUser = {

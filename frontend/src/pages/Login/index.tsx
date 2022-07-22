@@ -1,4 +1,3 @@
-import React, { PropsWithChildren } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Api from '../../Api';
@@ -28,7 +27,7 @@ const Register = () => {
     return (
         <AreaLogin>
                 <h1 className='return'>
-                    <Link to="/"><img src="../../../arrowback.jpg" /></Link>
+                    <Link to="/"><img src="../../../arrowback.jpg" alt='arrowback'/></Link>
                        Crie sua conta
                 </h1>
 
@@ -66,12 +65,12 @@ const Login = () => {
         <AreaLogin>
                 <h1>Faça login em sua conta</h1>
                 <BtnDefaultIcons>
-                    <img src="../../../facebook.png" />
+                    <img src="../../../facebook.png" alt='facebook'/>
                     <div className="center">Fazer login com o Facebook</div>
                 </BtnDefaultIcons>
 
                 <BtnDefaultIcons onClick={actionLoginGit}>
-                    <img src="../../../google.png" />
+                    <img src="../../../google.png" alt='google'/>
                     <div className="center">Fazer login com o Google</div>
                 </BtnDefaultIcons>
 
