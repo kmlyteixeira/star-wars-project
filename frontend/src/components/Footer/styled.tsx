@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const AreaFooter = styled.div`
-    background-color: #DDDEDA;
+    background-color: #020004;
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    color: #020004;
+    color: white;
 
     bottom: 0;
     position: fixed;

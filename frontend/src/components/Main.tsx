@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const ContainerPage = styled.div`
-    padding: 5px 20px;
+    padding: 3px 20px;
 `;
 
 export const TitlePage = styled.h1`
     font-size: 20px;
     text-align: center;
+    color: white;
 `;
 
 export const MovieList = styled.ul`
@@ -23,14 +24,16 @@ export const Movie = styled.li`
     align-items: center;
 
     img {
-        width: 200px;
+        width: 100%;
         border-radius: 16px;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     span {
         font-weight: bold;
-        font-size: 100%;
+        font-size: 13px;
+        margin-bottom: 15px;
+        color: white;
     }
 
     a {
