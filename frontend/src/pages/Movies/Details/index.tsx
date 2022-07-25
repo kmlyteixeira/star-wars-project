@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ContainerPage, TitlePage } from "../../../components/Main"
 
@@ -8,7 +8,7 @@ export default function Details() {
 
     return (
         <ContainerPage>
-            <TitlePage>Page Detalhes</TitlePage>
+            <TitlePage>Detalhes</TitlePage>
         </ContainerPage>
         
     )

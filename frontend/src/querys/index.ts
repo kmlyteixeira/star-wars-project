@@ -1,4 +1,6 @@
-const MOVIES_QUERY = `
+import { gql } from "@apollo/client";
+
+export const MOVIES_QUERY = gql`
 {
   allFilms {
     films {
@@ -9,4 +11,42 @@ const MOVIES_QUERY = `
 }
 `;
 
-export default MOVIES_QUERY;
+
+export const CHARACTERS_QUERY = gql`
+{
+  allPeople {
+    people {
+      id
+      name
+      species {
+        name
+      }
+      filmConnection {
+        films {
+          id
+          title
+        }
+      }
+    }
+  }
+}
+`;
+
+export const VEHICLES_QUERY = gql`
+{
+  allVehicles {
+    vehicles {
+      id
+      name
+      vehicleClass
+      maxAtmospheringSpeed
+      filmConnection {
+        films {
+          id
+          title
+        }
+      }
+    }
+  }
+}
+`;

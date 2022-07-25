@@ -1,8 +1,7 @@
-import React, { useState } from "react";
 import { AreaHeader } from './styled';
 import { Link } from 'react-router-dom';
 
-function Header(props: { user: { avatar: any; name: string; }; }){
+function Header(props){
     return (
         <AreaHeader>
             <div className="container">
@@ -13,7 +12,7 @@ function Header(props: { user: { avatar: any; name: string; }; }){
                     <Link to="/"><img src="../../../logoprincipal.png"></img></Link>
                 </div>
                 <nav>
-                    <ul className="nav-list">
+                    <ul className="navList">
                         <li><Link to="/movies">Filmes</Link></li>
                         <li><Link to="/actionfig">Action Figures</Link></li>
                     </ul>

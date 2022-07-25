@@ -19,47 +19,29 @@ export const AreaHeader = styled.div`
         }
 
         .menu {
-            cursor: pointer;
-            display: block;
-
             img {
                 width: 25px;
                 margin-right: 10px;
                 margin-top: 15px;
             }
         }
+
         nav {
             display: flex;
 
-            .nav-list {
+            ul {
                 display: flex;
-                position: absolute;
-                top: 8vh;
-                left: 0;
-                width: 35vh;
-                height: 92vh;
-                background-color: #dba90d;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-                transform: translateX(-100%);
-            }
+                
+                    li {
+                    list-style: none;
+                    margin-right: 25px;
+                    a {
+                        text-decoration: none;
+                        color: white;
 
-            .nav-list.active {
-                transform: translateX(0);
-            }
-
-            li {
-                list-style: none;
-                margin-right: 25px;
-                opacity: 0;
-
-                a {
-                    text-decoration: none;
-                    color: black;
-
-                    &: hover{
-                        color: #fff; 
+                        &: hover{
+                            color: #DBA90D; 
+                        }
                     }
                 }
             }
