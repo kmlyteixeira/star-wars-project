@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AreaHeader = styled.div`
-    height: 60px;
+    height: 8vh;
     background-image: linear-gradient(to right, #020004, #4E0000);
     color: #FFF;
 
@@ -19,6 +19,9 @@ export const AreaHeader = styled.div`
         }
 
         .menu {
+            cursor: pointer;
+            display: block;
+
             img {
                 width: 25px;
                 margin-right: 10px;
@@ -28,20 +31,35 @@ export const AreaHeader = styled.div`
         nav {
             display: flex;
 
-            ul {
+            .nav-list {
                 display: flex;
+                position: absolute;
+                top: 8vh;
+                left: 0;
+                width: 35vh;
+                height: 92vh;
+                background-color: #dba90d;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(-100%);
+            }
+
+            .nav-list.active {
+                transform: translateX(0);
             }
 
             li {
                 list-style: none;
-                margin-left: 20px;
+                margin-right: 25px;
+                opacity: 0;
 
                 a {
                     text-decoration: none;
-                    color: #fff;
+                    color: black;
 
                     &: hover{
-                        color: #FCA311; 
+                        color: #fff; 
                     }
                 }
             }

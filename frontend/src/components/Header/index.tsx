@@ -13,10 +13,9 @@ function Header(props: { user: { avatar: any; name: string; }; }){
                     <Link to="/"><img src="../../../logoprincipal.png"></img></Link>
                 </div>
                 <nav>
-                    <ul>
+                    <ul className="nav-list">
                         <li><Link to="/movies">Filmes</Link></li>
                         <li><Link to="/actionfig">Action Figures</Link></li>
-                        <li><Link to="/">Sair</Link></li>
                     </ul>
 
                     <div className="avatar">

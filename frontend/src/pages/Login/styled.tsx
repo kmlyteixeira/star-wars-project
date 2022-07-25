@@ -13,6 +13,8 @@ export const AreaLogin = styled.div`
 
     h1 {
         font-size: 25px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .return{
@@ -67,5 +69,9 @@ export const AreaLogin = styled.div`
                 color: #4e0000;
             }
         }
+    }
+
+    .loginImage{
+        width: 80px;
     }
 `;

@@ -6,8 +6,20 @@ export const ContainerPage = styled.div`
 
 export const TitlePage = styled.h1`
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     color: white;
+
+    .display-one {
+        padding: 80px;
+        font-size: 50px;
+        font-family: Courier New, monospace;
+        font-style: normal;
+    }
+
+    .text-aux {
+        color: #DBA90D;
+    }
+
 `;
 
 export const MovieList = styled.ul`

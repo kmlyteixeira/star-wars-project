@@ -63,7 +63,8 @@ const Register = () => {
 const Login = () => {
     return (
         <AreaLogin>
-                <h1>Faça login em sua conta</h1>
+                <img className='loginImage' src='../../../yoda.gif' alt='yoda'></img>
+                <h1>Faça seu Login</h1>
                 <BtnDefaultIcons>
                     <img src="../../../facebook.png" alt='facebook'/>
                     <div className="center">Fazer login com o Facebook</div>

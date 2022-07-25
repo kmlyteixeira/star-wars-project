@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -8,6 +8,20 @@ import './App.css';
 import Routes from './Routes';
 
 function App() {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "src/components/Header/navbar.jsx";
+    script.async = true;
+  
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+  
 
   interface newUser {
     id: any,
