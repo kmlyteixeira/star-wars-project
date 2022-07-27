@@ -21,14 +21,15 @@ export const CHARACTERS_QUERY = gql`
   allPeople {
     people {
       id
+      eyeColor
+      birthYear
+      gender
+      hairColor
+      height
       name
-      species {
-        name
-      }
       filmConnection {
         films {
           id
-          title
         }
       }
     }

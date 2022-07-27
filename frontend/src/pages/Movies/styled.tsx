@@ -1,4 +1,4 @@
-import styled, { StyledComponent } from "styled-components";
+import styled from "styled-components";
 
 export const DetailsList = styled.ul`
     color: white;
@@ -6,11 +6,13 @@ export const DetailsList = styled.ul`
     li {
         list-style: none;
         display: flex;
-        margin-left: 300px;
-    
-        @media screen and (max-width: 1000px){
+        margin-rigth: 150px;
+            
+        @media screen and (max-width: 1200px){
+            display: list-item;
+
             img {
-                display: none;
+                display: grid;
             }
         }
 
@@ -28,6 +30,10 @@ export const DetailsList = styled.ul`
             margin-right: 250px;
         }
 
+        .titleStyled {
+            color: white;
+        }
+
     }
 
     .textAux {
@@ -39,7 +45,7 @@ export const DetailsList = styled.ul`
     }
 
     .buttonCollection {
-        margin-left: 325px;
+        margin-left: 85px;
         width: 200px;
         font-family: Franklin Gothic;
         background-color: #DBA90D;
@@ -50,4 +56,10 @@ export const DetailsList = styled.ul`
             background-color: white;
         }
     }
+`;
+
+export const SpanMovie = styled.span `
+    font-family: Franklin Gothic;
+    color: white;
+    font-size: 20px;
 `;

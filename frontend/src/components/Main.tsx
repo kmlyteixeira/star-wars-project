@@ -5,7 +5,7 @@ export const ContainerPage = styled.div`
 `;
 
 export const TitlePage = styled.h1`
-    font-size: 20px;
+    font-size: 25px;
     text-align: left;
     color: white;
 

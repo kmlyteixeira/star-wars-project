@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { ContainerPage, Movie, MovieList, TitlePage } from '../../components/Main';
+import { SpanMovie } from "./styled";
 
 const Page = () => {
 
@@ -40,7 +41,6 @@ const Page = () => {
 
     return (
         <ContainerPage>
-            <TitlePage > Filmes </TitlePage>
             <MovieList>
                 {movies.map(mov => {
                     return (
@@ -48,7 +48,7 @@ const Page = () => {
                         <Link to={`/details/${mov.id}`}>
                             <img src={mov.image_URL}></img>
                         </Link>
-                        <span>{mov.title}</span>
+                        <SpanMovie>{mov.title}</SpanMovie>
                         </Movie>
                         )
                     })}

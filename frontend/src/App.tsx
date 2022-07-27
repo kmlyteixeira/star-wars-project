@@ -6,9 +6,13 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import './App.css';
 import Routes from './Routes';
+import { useQuery } from '@apollo/client';
+import { CHARACTERS_QUERY, MOVIES_QUERY } from './querys';
 
 
 function App() {
+
+  const { data } = useQuery(MOVIES_QUERY)
 
   interface newUser {
     id: any,

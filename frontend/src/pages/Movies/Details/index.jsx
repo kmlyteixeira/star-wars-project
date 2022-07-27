@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import { ContainerPage, TitlePage } from "../../../components/Main"
 import { BtnDefault } from "../../../components/Styled";
 import { MOVIES_QUERY } from "../../../querys";
-import { DetailsList } from "./styled";
+import { DetailsList, SpanMovie } from "../styled";
+import { Link } from "react-router-dom";
 
 export default function Details() {
 
     const { data } = useQuery(MOVIES_QUERY)
     console.log(data)
 
-    
     var { id } = useParams();
     var index = Number(id);
     const detailsMovies = Object.values(data.allFilms.films);
@@ -47,24 +47,28 @@ export default function Details() {
             image: moviesImage[index].image_URL
         }
     ]
-    
+
     return (
         <ContainerPage>
             <DetailsList>
-            {details.map((det) => {
+                {details.map((det) => {
                     return (
                         <>
-                        <li><TitlePage>{det.title}</TitlePage></li>
-                        <li>
-                            <img src={det.image}></img>
-                            <span className="openingStyled">{det.openingCrawl}</span>
-                        </li>
-                        <BtnDefault className="buttonCollection">Add to my Collection</BtnDefault>
+                            <li>
+                                <img src={det.image}></img>
+                                <span className="openingStyled">
+                                    <span className="titleStyled">{det.title}</span><br /><br />
+                                    {det.openingCrawl}<br /><br />
+                                    <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
+                                    <BtnDefault><Link to={`/details/${index}/characters`}>Character Details</Link></BtnDefault>
+                                </span>
+                            </li>
+                            <BtnDefault className="buttonCollection">Add to my Collection</BtnDefault>
                         </>
                     )
                 })}
             </DetailsList>
         </ContainerPage>
-        
+
     )
 }
