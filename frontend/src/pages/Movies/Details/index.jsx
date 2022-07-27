@@ -1,14 +1,16 @@
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { ContainerPage, TitlePage } from "../../../components/Main"
+import { BtnDefault } from "../../../components/Styled";
 import { MOVIES_QUERY } from "../../../querys";
 import { DetailsList } from "./styled";
 
 export default function Details() {
 
     const { data } = useQuery(MOVIES_QUERY)
+    console.log(data)
 
-    /**/
+    
     var { id } = useParams();
     var index = Number(id);
     const detailsMovies = Object.values(data.allFilms.films);
@@ -45,7 +47,7 @@ export default function Details() {
             image: moviesImage[index].image_URL
         }
     ]
-    /**/
+    
     return (
         <ContainerPage>
             <DetailsList>
@@ -57,6 +59,7 @@ export default function Details() {
                             <img src={det.image}></img>
                             <span className="openingStyled">{det.openingCrawl}</span>
                         </li>
+                        <BtnDefault className="buttonCollection">Add to my Collection</BtnDefault>
                         </>
                     )
                 })}

@@ -37,4 +37,17 @@ export const DetailsList = styled.ul`
         margin-top: 25px;
         margin-left: 30px;
     }
+
+    .buttonCollection {
+        margin-left: 325px;
+        width: 200px;
+        font-family: Franklin Gothic;
+        background-color: #DBA90D;
+        color: black;
+        display: inline;
+
+        &:hover{
+            background-color: white;
+        }
+    }
 `;
