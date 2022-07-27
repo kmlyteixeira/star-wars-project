@@ -4,8 +4,12 @@ export const MOVIES_QUERY = gql`
 {
   allFilms {
     films {
-     title
-     id         
+      id
+      created
+      director
+      episodeID
+      openingCrawl
+      title
     }
   }
 }

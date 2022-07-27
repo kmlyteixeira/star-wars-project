@@ -18,9 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "useUnknownInCatchVariables": false,
   },
   "include": [
     "src"
-  ]
+, "src/config/firebaseConfig.ts", "src/config/react-app-env.d.ts"  ]
 }

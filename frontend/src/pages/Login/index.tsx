@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-import Api from '../../Api';
+import Api from '../../services/firebaseApi';
 import { AreaLogin } from './styled';
 
 import { BtnDefaultIcons, BtnDefault } from '../../components/Styled';
