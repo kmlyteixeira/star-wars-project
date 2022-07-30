@@ -60,7 +60,6 @@ export default function Details() {
                                     <span className="titleStyled">{det.title}</span><br /><br />
                                     {det.openingCrawl}<br /><br />
                                     <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
-                                    <BtnDefault><Link to={`/details/${index}/characters`}>Character Details</Link></BtnDefault>
                                 </span>
                             </li>
                             <BtnDefault className="buttonCollection">Add to my Collection</BtnDefault>

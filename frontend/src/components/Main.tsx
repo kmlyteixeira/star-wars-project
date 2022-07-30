@@ -8,6 +8,7 @@ export const TitlePage = styled.h1`
     font-size: 25px;
     text-align: left;
     color: white;
+    display: flex;
 
     .display-one {
         padding: 80px;
