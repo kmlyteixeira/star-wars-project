@@ -72,3 +72,4 @@ export const AreaHeader = styled.div`
             }
         }
 `;
+
