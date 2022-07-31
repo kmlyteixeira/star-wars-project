@@ -26,37 +26,37 @@ const actionLoginGit = async () => {
 const Register = () => {
     return (
         <AreaLogin>
-                <h1 className='return'>
-                    <Link to="/"><img src="../../../arrowback.jpg" alt='arrowback'/></Link>
-                       Crie sua conta
-                </h1>
+            <h1 className='return'>
+                <Link to="/"><img src="../../../arrowback.jpg" alt='arrowback' /></Link>
+                Crie sua conta
+            </h1>
 
-                <p>Crie sua conta, é grátis!</p>
+            <p>Crie sua conta, é grátis!</p>
 
-                <form>
-                    <div className="form--input">
-                        <label>Nome</label>
-                        <input type="text" />
-                    </div>
+            <form>
+                <div className="form--input">
+                    <label>Nome</label>
+                    <input type="text" />
+                </div>
 
-                    <div className="form--input">
-                        <label>E-mail</label>
-                        <input type="email" />
-                    </div>
+                <div className="form--input">
+                    <label>E-mail</label>
+                    <input type="email" />
+                </div>
 
-                    <div className="form--input">
-                        <label>Senha</label>
-                        <input type="password" />
-                    </div>
+                <div className="form--input">
+                    <label>Senha</label>
+                    <input type="password" />
+                </div>
 
-                    <BtnDefault>Comece Agora!</BtnDefault>
-                
-                    <div className="footerLogin">
-                        Já tem uma conta?  
-                        <Link to="/">Fazer Login</Link>
-                    </div>
-                </form>
-            </AreaLogin>
+                <BtnDefault>Comece Agora!</BtnDefault>
+
+                <div className="footerLogin">
+                    Já tem uma conta?
+                    <Link to="/">Fazer Login</Link>
+                </div>
+            </form>
+        </AreaLogin>
     );
 }
 

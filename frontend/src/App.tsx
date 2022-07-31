@@ -7,12 +7,13 @@ import Login from './pages/Login';
 import './App.css';
 import Routes from './Routes';
 import { useQuery } from '@apollo/client';
-import { CHARACTERS_QUERY, MOVIES_QUERY } from './querys';
+import { MOVIES_QUERY } from './querys';
+import { client } from './services/apollo';
 
 
 function App() {
 
-  const { data } = useQuery(MOVIES_QUERY)
+  const { data } = useQuery(MOVIES_QUERY, {client: client})
 
   interface newUser {
     id: any,
@@ -40,8 +41,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header user={user}/>
+      <div className="stars"></div>
+      <div className="twinkling"></div>
       <Routes></Routes>
-
       <Footer />
     </BrowserRouter>
   );

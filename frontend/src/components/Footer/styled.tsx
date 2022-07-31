@@ -4,31 +4,31 @@ export const AreaFooter = styled.div`
     background-color: #020004;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
+    font-size: 13px;
     font-family: Courier New, monospace;
     color: white;
 
     bottom: 0;
     position: fixed;
     width: 100%;
+    height: 5vh;
 
    ul {
 
-    display: flex;
-    margin-left: 70px;
+    display: list-item;
+    position: relative;
 
         li {
             list-style: none;
 
             img {
-                width: 15px;
+                width: 10px;
                 margin-left: 10px;
             }
         }
 
         .text-aux-foot {
-            font-size: 10px;
-            margin-left: 925px;
+            font-size: 9.5px;
         }
    }
 `;

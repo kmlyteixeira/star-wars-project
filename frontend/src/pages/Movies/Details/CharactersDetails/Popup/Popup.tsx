@@ -9,7 +9,7 @@ function Popup(props: any) {
         { props.children }
       </div>
     </PopupDiv>
-  ) : "";
+  ): null;
 }
 
 export default Popup

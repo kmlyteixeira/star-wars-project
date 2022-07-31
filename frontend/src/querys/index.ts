@@ -15,43 +15,11 @@ export const MOVIES_QUERY = gql`
 }
 `;
 
-
-export const CHARACTERS_QUERY = gql`
-{
-  allPeople {
-    people {
-      id
-      eyeColor
-      birthYear
-      gender
-      hairColor
-      height
-      name
-      filmConnection {
-        films {
-          id
-        }
-      }
-    }
+export const ADD_MOVIE_MUTATION = gql`
+mutation($comment: String!, $value: String!, $acquired: String!, $title: String!) {
+  AddMovie(comment: $comment, value: $value, acquired: $acquired, title: $title) {
+    id
   }
 }
 `;
 
-export const VEHICLES_QUERY = gql`
-{
-  allVehicles {
-    vehicles {
-      id
-      name
-      vehicleClass
-      maxAtmospheringSpeed
-      filmConnection {
-        films {
-          id
-          title
-        }
-      }
-    }
-  }
-}
-`;

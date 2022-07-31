@@ -6,7 +6,7 @@ export const DetailsList = styled.ul`
     li {
         list-style: none;
         display: flex;
-        margin-rigth: 150px;
+        margin-rigth: 150px; 
             
         @media screen and (max-width: 1200px){
             display: list-item;

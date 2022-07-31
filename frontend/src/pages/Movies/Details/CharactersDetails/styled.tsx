@@ -7,22 +7,24 @@ export const Parent = styled.section`
 
     .card {
         margin: 1%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 16px;
         transition: 0.3s;
         width: 20%;
-        background-color: white;
+        background-color: black;
 
         h4 {
-            color: black;
+            color: white;
         }
 
         img {
-            width: 100%; 
+            width: 100%;
             height: 300px; 
             object-fit: cover;
+            object-position: 100% 0%;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
+            image-position: top center;
         }
         
     }
@@ -60,5 +62,9 @@ export const PopupDiv = styled.div`
         position: absolute;
         top: 16px;
         right: 16px;
+    }
+
+    img {
+        width: 100px;
     }
 `;

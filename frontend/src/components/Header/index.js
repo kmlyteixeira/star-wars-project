@@ -10,7 +10,6 @@ function Header(props){
                 </div>
                 <nav>
                     <div className="avatar">
-                        <img src ={props.user.avatar} />
                         <label>{props.user.name}</label>
                     </div>
                 </nav>

@@ -5,10 +5,11 @@ import { BtnDefault } from "../../../components/Styled";
 import { MOVIES_QUERY } from "../../../querys";
 import { DetailsList, SpanMovie } from "../styled";
 import { Link } from "react-router-dom";
+import { client } from "../../../services/apollo.ts";
 
 export default function Details() {
 
-    const { data } = useQuery(MOVIES_QUERY)
+    const { data } = useQuery(MOVIES_QUERY, {client: client})
     console.log(data)
 
     var { id } = useParams();
@@ -62,12 +63,11 @@ export default function Details() {
                                     <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
                                 </span>
                             </li>
-                            <BtnDefault className="buttonCollection">Add to my Collection</BtnDefault>
+                            <Link to="/addcollection"><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>
                         </>
                     )
                 })}
             </DetailsList>
         </ContainerPage>
-
     )
 }
