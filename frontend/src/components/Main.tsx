@@ -5,14 +5,19 @@ export const ContainerPage = styled.div`
 `;
 
 export const TitlePage = styled.h1`
-    font-size: 25px;
+    font-size: 15px;
     text-align: left;
     color: white;
-    display: flex;
+    
+
+    @media screen and (max-width: 1200px){
+        display: list-item;
+        
+    }
 
     .display-one {
-        padding: 80px;
-        font-size: 50px;
+        margin-left: 15%;
+        font-size: 35px;
         font-family: Courier New, monospace;
         font-style: normal;
     }
@@ -23,7 +28,7 @@ export const TitlePage = styled.h1`
 
 `;
 
-export const MovieList = styled.ul`
+export const ListStyle = styled.ul`
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -31,7 +36,7 @@ export const MovieList = styled.ul`
     row-gap: 15px;
 `;
 
-export const Movie = styled.li`
+export const LineStyle = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,5 +60,21 @@ export const Movie = styled.li`
 
     a:hover {
         transform: scale(1.1);
+    }
+
+    .card-link {
+        width: 500px; 
+        height: 200px; 
+        object-fit: cover;
+
+        span {
+            position: absolute;
+            font-size: 25px;
+            font-family: Courier New, monospace;
+            left: 180px;
+            top: 160px;
+            color: white;
+            background-color: rgba(0,0,0,.4);
+        }
     }
 `;

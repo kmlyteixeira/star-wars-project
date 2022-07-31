@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ContainerPage, Movie, MovieList, TitlePage } from '../../components/Main';
+import { ContainerPage, ListStyle, LineStyle, TitlePage } from '../../components/Main';
 import { SpanMovie } from "./styled";
 
 const Page = () => {
@@ -41,18 +41,19 @@ const Page = () => {
 
     return (
         <ContainerPage>
-            <MovieList>
+            <ListStyle>
                 {movies.map(mov => {
                     return (
-                        <Movie key={mov.id}>
+                        <LineStyle key={mov.id}>
                         <Link to={`/details/${mov.id}`}>
                             <img src={mov.image_URL}></img>
                         </Link>
                         <SpanMovie>{mov.title}</SpanMovie>
-                        </Movie>
+                        </LineStyle>
                         )
                     })}
-            </MovieList>
+            </ListStyle>
+            <p><br></br></p>
         </ContainerPage>
     );
 }

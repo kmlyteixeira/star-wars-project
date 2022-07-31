@@ -1,8 +1,8 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { client } from './services/apollo';
+import { intern } from './services/apollo';
 
 
 const root = ReactDOM.createRoot(
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    <ApolloProvider client={intern}>
       <App />
     </ApolloProvider>
   </React.StrictMode>
