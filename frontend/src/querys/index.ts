@@ -15,6 +15,19 @@ export const MOVIES_QUERY = gql`
 }
 `;
 
+export const MOVIE_DETAILS = gql`
+query($filmId: ID) {
+  film(id: $filmId) {
+    id
+    created
+    director
+    episodeID
+    openingCrawl
+    title
+  }
+}
+`;
+
 export const ADD_MOVIE_MUTATION = gql`
 mutation($comment: String!, $value: String!, $acquired: String!, $title: String!) {
   AddMovie(comment: $comment, value: $value, acquired: $acquired, title: $title) {

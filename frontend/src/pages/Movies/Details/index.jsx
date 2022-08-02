@@ -63,7 +63,7 @@ export default function Details() {
                                     <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
                                 </span>
                             </li>
-                            <Link to="/addcollection"><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>
+                            <Link to={`/details/${det.id}/addcollection`}><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>
                         </>
                     )
                 })}
