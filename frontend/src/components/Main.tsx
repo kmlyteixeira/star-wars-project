@@ -78,7 +78,3 @@ export const LineStyle = styled.li`
         }
     }
 `;
-
-export const ImageIcon = styled.img `
-    width: 20px;
-`;
