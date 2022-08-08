@@ -19,21 +19,6 @@ export const DetailsList = styled.ul`
         img {
             padding: 25px;
         }
-
-        .openingStyled {
-            color: #DBA90D;
-            font-family: Franklin Gothic;
-            padding: 25px;
-            font-size: 25px;
-            text-align: center;
-            margin-top: 80px;
-            margin-right: 250px;
-        }
-
-        .titleStyled {
-            color: white;
-        }
-
     }
 
     .textAux {
@@ -58,8 +43,29 @@ export const DetailsList = styled.ul`
     }
 `;
 
-export const SpanMovie = styled.span `
+export const SpanMovie = styled.span`
     font-family: Franklin Gothic;
     color: white;
     font-size: 20px;
+`;
+
+export const SpanOpening = styled.span`
+    color: #DBA90D;
+    font-family: Franklin Gothic;
+    padding: 25px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 80px;
+    margin-right: 250px;
+`;
+
+export const VideoContainer = styled.video``;
+
+export const DivVideo = styled.div`
+`;
+
+export const VideoControls = styled.div`
+`;
+
+export const VideoButton = styled.button`
 `;
