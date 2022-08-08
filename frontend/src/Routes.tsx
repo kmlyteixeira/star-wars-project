@@ -15,11 +15,7 @@ export default () => {
             <Route path="/Movies" element = {<Movies />} />
             <Route path="/details/:id" element = {<Details />} />
             <Route path="/characters" element = {<Characters />} />
-<<<<<<< HEAD
-            <Route path="/addcollection/:id" element = {<AddMovie />} />
-=======
-            <Route path="/details/:id/addcollection" element = {<AddMovie />} />
->>>>>>> 152c3711577408a6a644b3d9125c2b93c643207b
+            <Route path="/addcollection" element = {<AddMovie />} />
         </Routes>
     );
 }
