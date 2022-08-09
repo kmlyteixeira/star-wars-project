@@ -14,5 +14,5 @@ Uma das maiores franquias do mundo cinematográfico, Star Wars vem cativando fã
 ```npm run dev```  
 ```npm start```  
 # 
-/*#### ÁRVORE DE ARQUIVOS*/
+#### ÁRVORE DE ARQUIVOS
 
