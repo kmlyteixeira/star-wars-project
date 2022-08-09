@@ -11,7 +11,7 @@ Uma das maiores franquias do mundo cinematográfico, Star Wars vem cativando fã
 # 
 #### INICIALIZANDO O AMBIENTE
 ```npm install```  
-```npm run dev```  
+```npm run dev ── "Server is running on http://localhost:4000/"```  
 ```npm start```  
 # 
 #### ÁRVORE DE ARQUIVOS
