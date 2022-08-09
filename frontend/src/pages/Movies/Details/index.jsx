@@ -99,7 +99,6 @@ export default function Details() {
                                     <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
                                 </SpanOpening>
                             </li>
-<<<<<<< HEAD
                             <DivVideo>
                                 <VideoContainer ref={$videoPlayer} src={det.video} poster={det.thumbnail}></VideoContainer>
                                 <VideoControls>
@@ -109,9 +108,6 @@ export default function Details() {
                                 </VideoControls>
                             </DivVideo>
                             <Link to={`/addcollection/${det.id}`}><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>                        
-=======
-                            <Link to={`/details/${det.id}/addcollection`}><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>
->>>>>>> 152c3711577408a6a644b3d9125c2b93c643207b
                         </>
                     )
                 })}

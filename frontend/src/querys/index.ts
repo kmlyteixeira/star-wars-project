@@ -15,22 +15,10 @@ export const MOVIES_QUERY = gql`
 }
 `;
 
-<<<<<<< HEAD
 export const DETAILS_MOVIE_QUERY = gql`
   query Film($filmId: ID) {
     film(id: $filmId) {
       title
-=======
-export const MOVIE_DETAILS = gql`
-query($filmId: ID) {
-  film(id: $filmId) {
-    id
-    created
-    director
-    episodeID
-    openingCrawl
-    title
->>>>>>> 152c3711577408a6a644b3d9125c2b93c643207b
   }
 }
 `;
