@@ -15,4 +15,63 @@ Uma das maiores franquias do mundo cinematográfico, Star Wars vem cativando fã
 ```npm start```  
 # 
 #### ÁRVORE DE ARQUIVOS
+```
+star-wars-project
+|
+├── backend
+│   ├── src
+|   |   ├── models
+|   |   └── resolvers   
+│   ├── index.ts
+|   ├── package-lock.json
+|   ├── package.json
+|   ├── schema.gql
+|   ├── tsconfig.json
+│   └── yarn.lock
+|   
+├── frontend
+│   ├── public
+│   │   └── img
+│   ├── src
+|   |   ├── components
+|   |   |   ├── Footer
+|   |   |   ├── Header
+|   |   |   ├── Main.tsx
+|   |   |   └── Styled.tsx
+|   |   ├── config
+|   |   |   ├── firebaseConfig.ts
+|   |   |   └── react-app-env.ts
+|   |   ├── pages
+|   |   |   ├── Forms
+|   |   |   |   ├── AddMovie
+|   |   |   |   └── styled.tsx
+|   |   |   ├── Home
+|   |   |   |   └── index.tsx
+|   |   |   ├── Login
+|   |   |   |   ├── index.tsx
+|   |   |   |   ├── login.css
+|   |   |   |   └── styled.tsx
+|   |   |   └── Movies
+|   |   |   |   ├── Details
+|   |   |   |   |   ├── CharactersDetails
+|   |   |   |   |   |   ├── Popup
+|   |   |   |   |   |   ├── index.tsx
+|   |   |   |   |   |   └── styled.tsx
+|   |   |   |   |   └── index.jsx
+|   |   |   |   ├── index.tsx
+|   |   |   |   └── styled.tsx
+|   |   ├── querys
+|   |   |   └── index.ts
+│   │   └── services
+|   |       ├── apollo.ts
+|   |       └── firebaseApi.ts
+|   |
+|   ├── README.md
+|   ├── package-lock.json
+|   ├── package.json
+|   ├── tsconfig.json
+│   └── yarn.lock
+|
+└ README.md
+```
 
