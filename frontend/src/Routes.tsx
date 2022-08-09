@@ -15,7 +15,7 @@ export default () => {
             <Route path="/Movies" element = {<Movies />} />
             <Route path="/details/:id" element = {<Details />} />
             <Route path="/characters" element = {<Characters />} />
-            <Route path="/addcollection" element = {<AddMovie />} />
+            <Route path="/addcollection/:id" element = {<AddMovie />} />
         </Routes>
     );
 }
