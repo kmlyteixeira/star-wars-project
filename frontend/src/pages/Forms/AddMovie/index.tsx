@@ -10,9 +10,6 @@ import { FormStyled, InputStyled } from "../styled";
 
 const Page = () => {
 
-    const { id } = useParams();
-    const { data } = useQuery(DETAILS_MOVIE_QUERY, {client: client, variables: {filmId: id}});
-
     const [title, setTitle] = useState(data?.film?.title);
     const [comment, setComment] = useState("");
     const [acquired, setAcquired] = useState("");
@@ -23,12 +20,14 @@ const Page = () => {
    /* useEffect(() => {
         setTitle(data?.film?.title);
     }, [title]);*/
+    
+    const [AddMovie, { data }] = useMutation(ADD_MOVIE_MUTATION);
+    console.log(data);
 
     async function handleAddMovie(event: FormEvent) {
         event.preventDefault();
 
-        if (!title)
-            return;
+        if (!title) return;
 
         await AddMovie({
             variables: {
