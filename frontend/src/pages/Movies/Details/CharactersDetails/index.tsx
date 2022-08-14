@@ -1,37 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ContainerPage, TitlePage, ListStyle, LineStyle } from "../../../../components/Main";
 import { Parent } from "./styled";
 import Popup from "./Popup/Popup";
+import { SpanMovie } from "../../styled";
+import { useLazyQuery, useQuery } from "@apollo/client";
+import { DETAILS_PEOPLE_QUERY } from "../../../../querys";
+import { client } from "../../../../services/apollo";
 
 export default function Characters() {
-
-    /*const { data } = useQuery(CHARACTERS_QUERY)
-    console.log(data);*/
 
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        data();
+        dataCharacters();
     }, [])
 
-    const data = async () => {
+    const dataCharacters = async () => {
         const dataCharacters = await fetch("https://akabab.github.io/starwars-api/api/all.json");
         const dataConvert = await dataCharacters.json();
         setCharacters(dataConvert);
     }
-    console.log(characters);
 
     const [btnPopup, setBtnPopup] = useState(false);
 
-    var handleClick = () => {
-        setBtnPopup(!btnPopup);
-    }
+    const ref = useRef(null);
+    const [executeQuery, { data }] = useLazyQuery(DETAILS_PEOPLE_QUERY, { client: client });
 
-    useEffect(() => {
-        if (btnPopup == true) {
-            /*Consumir a API*/
-        }
-    }, [btnPopup])
+    const handleClick = (event: any) => {
+        setBtnPopup(!btnPopup);
+
+        const idCharacter = event.target.id;
+        executeQuery({ variables: { personId: idCharacter } });
+    }
 
     return (
         <ContainerPage>
@@ -39,9 +39,10 @@ export default function Characters() {
                 {characters.map((char: any) => {
                     return (
                         <>
-                            <ListStyle onClick={handleClick} className="card" key={char.id}>
+                            <ListStyle className="card" >
                                 <LineStyle>
                                     <img src={char.image}></img>
+                                    <button id={char.id} onClick={handleClick}>TESTE</button>
                                     <div className="container">
                                         <h4>
                                             <b>{char.name}</b>
@@ -49,15 +50,16 @@ export default function Characters() {
                                     </div>
                                 </LineStyle>
                             </ListStyle>
-                            <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
-                                <div>
-                                    <img src={char.image}></img>
-                                </div>
-                            </Popup>
                         </>
                     )
                 })}
-
+                {Object.values(data).map((det: any) => {
+                    return (
+                        <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
+                            <SpanMovie>{det.name}</SpanMovie>
+                        </Popup>
+                    )
+                })}
             </Parent>
         </ContainerPage>
 

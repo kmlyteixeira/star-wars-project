@@ -17,6 +17,7 @@ export const DetailsList = styled.ul`
         }
 
         img {
+            width: 25%;
             padding: 25px;
         }
 
@@ -51,6 +52,7 @@ export const SpanMovie = styled.span `
     font-family: Franklin Gothic;
     color: white;
     font-size: 20px;
+    padding: 25px;
 `;
 
 export const SpanOpening = styled.span `
@@ -65,17 +67,10 @@ export const SpanOpening = styled.span `
 `;
 
 export const DivVideo = styled.div `
-
+    display: inline;
+    padding: 25px;
 `;
 
-export const VideoContainer = styled.video `
-    position: absolute;
-`;
-
-export const VideoControls = styled.div `
-    
-`;
-
-export const VideoButton = styled.button `
-    position: absolute;
+export const GifIcon = styled.img `
+    width: 18px;
 `;

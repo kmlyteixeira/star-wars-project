@@ -5,7 +5,7 @@ import { ContainerPage, TitlePage } from "../../../components/Main";
 import { BtnDefault } from "../../../components/Styled";
 import { ADD_MOVIE_MUTATION, DETAILS_MOVIE_QUERY} from "../../../querys";
 import { client } from "../../../services/apollo";
-import { SpanMovie } from "../../Movies/styled";
+import { GifIcon, SpanMovie } from "../../Movies/styled";
 import { FormStyled, InputStyled } from "../styled";
 
 const Page = () => {
@@ -42,7 +42,7 @@ const Page = () => {
     return (
         <ContainerPage>
             <SpanMovie>{title}</SpanMovie>
-            <TitlePage>YOU PATH YOU MUST DECIDE <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/63d9d7961d3aded.png"></img></TitlePage>
+            <TitlePage>YOU PATH YOU MUST DECIDE <GifIcon src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/63d9d7961d3aded.png"></GifIcon></TitlePage>
             <FormStyled onSubmit={handleAddMovie}>
                 <InputStyled type="text" value={comment} onChange={e => setComment(e.target.value)} />
                 <InputStyled type="text" value={acquired} onChange={e => setAcquired(e.target.value)} />

@@ -3,28 +3,10 @@ import { useParams } from "react-router-dom";
 import { ContainerPage } from "../../../components/Main"
 import { BtnDefault } from "../../../components/Styled";
 import { MOVIES_QUERY } from "../../../querys";
-import { DetailsList, SpanMovie, VideoContainer, DivVideo, VideoControls, VideoButton, SpanOpening} from "../styled";
+import { DetailsList, SpanMovie, SpanOpening, DivVideo, GifIcon} from "../styled";
 import { Link } from "react-router-dom";
 import { client } from "../../../services/apollo.ts";
-import { useRef, useState } from "react";
-import "node_modules/video-react/dist/video-react.css";
-
-function useVideoState($videoPlayer) {
-    const [playerState, setPlayerState] = useState({
-        playing: false,
-    })
-    function toggleVideoPlay() {
-        console.log($videoPlayer);
-        setPlayerState({
-            playing: !playerState.playing
-        })
-    }
-    return {
-        playerState,
-        toggleVideoPlay
-    }
-}
-
+import ReactPlayer from "react-player";
 
 export default function Details() {
 
@@ -34,39 +16,30 @@ export default function Details() {
     var index = Number(id);
     const detailsMovies = Object.values(data.allFilms.films);
 
-    const $videoPlayer = useRef(null);
-    const { playerState, toggleVideoPlay } = useVideoState($videoPlayer);
-
     const moviesImage = [
         {
             image_URL: 'https://m.media-amazon.com/images/I/51c6S4kGFmL.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/2TCNoKvgtxo'
         },
         {
             image_URL: 'https://m.media-amazon.com/images/I/51nwJJf3IjL.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/_lOT2p_FCvA'
         },
         {
             image_URL: 'https://m.media-amazon.com/images/I/51FFvV73KLL.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/IMzg2X18rm0'
         },
         {
             image_URL: 'https://upload.wikimedia.org/wikipedia/pt/3/30/Star_Wars_Epis%C3%B3dio_1_Amea%C3%A7a_Fantasma.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/gfMoXBOjWBM'
         },
         {
             image_URL: 'https://images-na.ssl-images-amazon.com/images/I/515poxBuvVL.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/7ZnL4mcU5dg'
         },
         {
             image_URL: 'https://upload.wikimedia.org/wikipedia/pt/5/58/Star_Wars_Epis%C3%B3dio_III_A_Vingan%C3%A7a_dos_Sith.jpg',
-            videoURL: 'https://youtu.be/_lOT2p_FCvA',
-            thumbnail: 'https://i.ytimg.com/vi/_lOT2p_FCvA/sddefault.jpg'
+            videoURL: 'https://youtu.be/8631ukAVr6g'
         },
     ]
 
@@ -81,7 +54,6 @@ export default function Details() {
             openingCrawl: detailsMovies[index].openingCrawl,
             image: moviesImage[index].image_URL,
             video: moviesImage[index].videoURL,
-            thumbnail: moviesImage[index].thumbnail
         }
     ]
 
@@ -101,12 +73,8 @@ export default function Details() {
                                 </SpanOpening>
                             </li>
                             <DivVideo>
-                                <VideoContainer ref={$videoPlayer} src={det.video} poster={det.thumbnail}></VideoContainer>
-                                <VideoControls>
-                                    <VideoButton onClick={toggleVideoPlay}>
-                                        { playerState.playing ? 'Pause' : 'Play' }
-                                    </VideoButton>
-                                </VideoControls>
+                                <SpanMovie>MEMORABLE SCENES</SpanMovie><GifIcon src="../../../saber.gif"></GifIcon>
+                                <ReactPlayer url={det.video}></ReactPlayer>
                             </DivVideo>
                         </>
                     )
