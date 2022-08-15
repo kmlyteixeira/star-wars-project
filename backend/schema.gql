@@ -3,6 +3,19 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Character {
+  arms: String!
+  icon: String!
+  id: ID!
+  image: String!
+  memorablePhrase: String!
+  name: String!
+  planet: String!
+  resume: String!
+  skill: String!
+  specie: String!
+}
+
 type Movie {
   acquired: String!
   comment: String!
@@ -16,5 +29,6 @@ type Mutation {
 }
 
 type Query {
+  GetCharacters: [Character!]!
   GetMovieCollection: [Movie!]!
 }

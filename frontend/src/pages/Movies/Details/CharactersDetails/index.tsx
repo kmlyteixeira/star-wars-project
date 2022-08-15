@@ -33,6 +33,8 @@ export default function Characters() {
         executeQuery({ variables: { personId: idCharacter } });
     }
 
+ //   console.log(data);
+
     return (
         <ContainerPage>
             <Parent>
@@ -53,14 +55,20 @@ export default function Characters() {
                         </>
                     )
                 })}
-                {Object.values(data).map((det: any) => {
+            </Parent>
+            {Object.values(data).map((det: any) => {
                     return (
                         <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
                             <SpanMovie>{det.name}</SpanMovie>
+                            <ListStyle>
+                                <LineStyle> BirthYear: {det.birthYear}</LineStyle>
+                                <LineStyle> EyeColor: {det.eyeColor}</LineStyle>
+                                <LineStyle> Gender: {det.gender}</LineStyle>
+                                <LineStyle> HairColor: {det.hairColor}</LineStyle>
+                            </ListStyle>
                         </Popup>
                     )
                 })}
-            </Parent>
         </ContainerPage>
 
     )
