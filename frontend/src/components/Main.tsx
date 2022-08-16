@@ -49,9 +49,10 @@ export const LineStyle = styled.li`
 
     span {
         font-weight: bold;
-        font-size: 13px;
+        font-size: 20px;
         margin-bottom: 15px;
         color: white;
+        font-family: Franklin Gothic;
     }
 
     a {

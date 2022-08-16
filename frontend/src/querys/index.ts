@@ -38,8 +38,8 @@ export const DETAILS_PEOPLE_QUERY = gql`
 `;
 
 export const DETAILS_PEOPLE_QUERY2 = gql`
-  query GetCharacters($getCharactersId: String!) {
-    GetCharacters(id: $getCharactersId) {
+  query GetCharacters{
+    GetCharacters{
       id
       name
       resume

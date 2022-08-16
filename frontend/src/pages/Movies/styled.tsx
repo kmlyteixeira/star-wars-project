@@ -53,6 +53,7 @@ export const SpanMovie = styled.span `
     color: white;
     font-size: 20px;
     padding: 25px;
+
 `;
 
 export const SpanOpening = styled.span `
