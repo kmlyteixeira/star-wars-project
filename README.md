@@ -11,8 +11,8 @@ Uma das maiores franquias do mundo cinematográfico, Star Wars vem cativando fã
 # 
 #### INICIALIZANDO O AMBIENTE
 ```npm install```  
-```npm run dev```  
-```npm start```  
+backend: ```npm run dev```  
+frontend: ```npm start```  
 # 
 #### ÁRVORE DE ARQUIVOS
 ```
