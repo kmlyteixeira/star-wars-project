@@ -29,6 +29,6 @@ type Mutation {
 }
 
 type Query {
-  GetCharacters: [Character!]!
+  GetCharacters(id: Float!): [Character!]!
   GetMovieCollection: [Movie!]!
 }

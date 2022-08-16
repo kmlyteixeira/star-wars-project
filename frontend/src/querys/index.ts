@@ -37,6 +37,23 @@ export const DETAILS_PEOPLE_QUERY = gql`
   }
 `;
 
+export const DETAILS_PEOPLE_QUERY2 = gql`
+  query GetCharacters($getCharactersId: String!) {
+    GetCharacters(id: $getCharactersId) {
+      id
+      name
+      resume
+      planet
+      specie
+      memorablePhrase
+      icon
+      image
+      arms
+      skill
+    }
+  }
+`;
+
 export const ADD_MOVIE_MUTATION = gql`
 mutation($comment: String!, $value: String!, $acquired: String!, $title: String!) {
   AddMovie(comment: $comment, value: $value, acquired: $acquired, title: $title) {

@@ -1,4 +1,4 @@
-import { Query, Resolver } from "type-graphql";
+import { Arg, Query, Resolver } from "type-graphql";
 import { Character } from "../models/Characters";
 
 @Resolver()
@@ -373,14 +373,16 @@ export class CharactersResolver {
             specie: "",
             memorablePhrase: "",
             icon: "",
-            image: "",
+            image: "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/luke-300x300.png",
             arms: "",
             skill: "" 
         }        
     ];
     
     @Query(() => [Character])
-    async GetCharacters() {
+    async GetCharacters(
+        @Arg("id") id: number
+    ) {
         return this.data;
     }
 
