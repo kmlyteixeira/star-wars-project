@@ -40,12 +40,14 @@ export const PopupDiv = styled.div`
     position: fixed;
     color: white;
     top: 10%;
-    left: 10%;
-    width: 100%
-    height: 100vh;
-    background-color: black;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: #4E0000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    display: flex;
+    display: column;
     justify-content: center;
     align-items: center;
 
@@ -53,7 +55,7 @@ export const PopupDiv = styled.div`
         position: relative;
         padding: 32px;
         width: 100%;
-        max-width: 640px;
+        max-width: 93%;
         backgroud-color: white;
     }
 
@@ -65,6 +67,6 @@ export const PopupDiv = styled.div`
     }
 
     img {
-        width: 100px;
+        width: 200px;
     }
 `;

@@ -25,7 +25,6 @@ export const TitlePage = styled.h1`
     .text-aux {
         color: #DBA90D;
     }
-
 `;
 
 export const ListStyle = styled.ul`

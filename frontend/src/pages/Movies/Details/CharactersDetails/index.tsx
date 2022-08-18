@@ -1,21 +1,35 @@
-import { useRef, useState } from "react";
-import { ContainerPage, ListStyle, LineStyle } from "../../../../components/Main";
-import { Parent } from "./styled";
+import { useEffect, useRef, useState } from "react";
+import { ContainerPage, ListStyle, LineStyle, TitlePage } from "../../../../components/Main";
+import { Parent, PopupDiv } from "./styled";
 import Popup from "./Popup/Popup";
 import { characters } from "./object";
+import Details from "..";
 
 export default function Characters() {
 
     const [btnPopup, setBtnPopup] = useState(false);
 
-    //const ref = useRef(null);
+    const ref = useRef(null);
 
     const handleClick = (event: any) => {
         setBtnPopup(!btnPopup);
-
-        const id = event.target.id;
-        console.log(id);
+        const index = event.target.id;
     }
+
+    const details = [
+        {
+            id: characters[1].id,
+            name: characters[1].name,
+            resume: characters[1].resume,
+            planet: characters[1].planet,
+            specie: characters[1].specie,
+            memorablePhrase: characters[1].memorablePhrase,
+            icon: characters[1].icon,
+            image: characters[1].image,
+            arms: characters[1].arms,
+            skill: characters[1].skill,
+        }
+    ]
 
     return (
         <ContainerPage>
@@ -24,17 +38,25 @@ export default function Characters() {
                     return (
                         <ListStyle className="card-link" >
                             <LineStyle>
-                                <img src={char.image} onClick={handleClick} alt="character"></img>
+                                <img id={char.id} src={char.image} onClick={handleClick} alt="character"></img>
                                 <span>{char.name}</span>
                             </LineStyle>
                         </ListStyle>
                     )
                 })}
-                <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
-                    POPUP
-                </Popup>
             </Parent>
+                {details.map((detail: any) => {
+                    return(
+                        <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
+                            <img src={detail.image}></img>
+                            <TitlePage>{detail.name}</TitlePage>
+                            <p>{detail.resume}</p>
+                        </Popup>
+                    )
+                })}
         </ContainerPage>
 
     )
 }
+
+

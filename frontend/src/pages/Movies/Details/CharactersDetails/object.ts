@@ -1,5 +1,17 @@
 export const characters: any[] = [
     {
+        id: 0,
+        name: "Anakin Skywalker",
+        resume: "",
+        planet: "",
+        specie: "",
+        memorablePhrase: "",
+        icon: "",
+        image: "../../images/anakin.png",
+        arms: "",
+        skill: "" 
+    },  
+    {
         id: 1,
         name: "Luke Skywalker",
         resume: "Até então um jovem órfão criado por um casal de fazendeiros de Tatooine, Luke descobre o seu destino ao cruzar com os droids C3PO e R2D2. Filho de Anakin Skywalker, encontra seu antigo mestre, Obi-Wan, salva a princesa Leia (que posteriormente descobriria ser sua irmã), destrói a principal arma do Império, a Estrela da Morte, se torna um dos líderes da Aliança Rebelde e finalmente ajuda a derrubar o Imperador Palpatine. No Episódio VII será mostrado já como um experiente mestre Jedi.",
@@ -358,17 +370,5 @@ export const characters: any[] = [
         image: "../../images/palpatine.png",
         arms: "",
         skill: "" 
-    },
-    {
-        id: 31,
-        name: "Anakin Skywalker",
-        resume: "",
-        planet: "",
-        specie: "",
-        memorablePhrase: "",
-        icon: "",
-        image: "../../images/anakin.png",
-        arms: "",
-        skill: "" 
-    }        
+    }      
 ]
