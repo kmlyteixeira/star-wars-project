@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { ContainerPage, ListStyle, LineStyle, TitlePage } from "../../../../components/Main";
-import { Parent, PopupDiv } from "./styled";
+import { ContainerPage, ListStyle, LineStyle } from "../../../../components/Main";
+import { Parent, TitleCharacter, PopupCharacter, PopupImage, PopupText, PopupList, PopupListItem, ListDiv } from "./styled";
 import Popup from "./Popup/Popup";
 import { characters } from "./object";
-import Details from "..";
 
 export default function Characters() {
 
@@ -48,9 +47,27 @@ export default function Characters() {
                 {details.map((detail: any) => {
                     return(
                         <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
-                            <img src={detail.image}></img>
-                            <TitlePage>{detail.name}</TitlePage>
-                            <p>{detail.resume}</p>
+                            <TitleCharacter>{detail.name}</TitleCharacter>
+                            <PopupCharacter>
+                                <PopupImage src={detail.image}></PopupImage>
+                                <PopupText>{detail.resume}</PopupText>
+                            </PopupCharacter>
+                            <ListDiv>
+                            <PopupList>
+                                <PopupListItem>PLANETA DE ORIGEM: </PopupListItem>
+                                <PopupListItem>ESPÉCIE (RAÇA): </PopupListItem>
+                                <PopupListItem>FRASE MARCANTE: </PopupListItem>
+                                <PopupListItem>ARMAS QUE UTILIZA: </PopupListItem>
+                                <PopupListItem>PRINCIPAIS HABILIDADES: </PopupListItem>
+                            </PopupList>
+                            <PopupList>
+                                <PopupListItem>{detail.planet}</PopupListItem>
+                                <PopupListItem>{detail.specie}</PopupListItem>
+                                <PopupListItem>{detail.memorablePhrase}</PopupListItem>
+                                <PopupListItem>{detail.arms}</PopupListItem>
+                                <PopupListItem>{detail.skill}</PopupListItem>
+                            </PopupList>
+                            </ListDiv>
                         </Popup>
                     )
                 })}

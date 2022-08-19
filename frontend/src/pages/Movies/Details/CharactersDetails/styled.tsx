@@ -42,7 +42,7 @@ export const PopupDiv = styled.div`
     top: 10%;
     left: 25%;
     width: 50%;
-    height: 50%;
+    height: 80%;
     background-color: #4E0000;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -65,8 +65,45 @@ export const PopupDiv = styled.div`
         top: 16px;
         right: 16px;
     }
+`;
 
-    img {
-        width: 200px;
+export const TitleCharacter = styled.h1`
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+`;
+
+export const PopupCharacter = styled.div`
+    display: flex;
+
+    @media (max-width: 1500px) {
+        align-items: center;
+        flex-direction: column;
     }
+`;
+
+export const PopupImage = styled.img`
+    width: 250px;
+`;
+
+export const PopupText = styled.p`
+    font-size: 18px;
+    font-family: Franklin Gothic;
+    text-align: center;
+`;
+
+export const PopupList = styled.ul`
+    list-style: none;
+    padding: 20px;
+`;
+
+export const PopupListItem = styled.li`
+    font-size: 18px;
+    font-family: Franklin Gothic;
+    line-height: 2.0;
+`;
+
+export const ListDiv = styled.div`
+    display: flex;
 `;
