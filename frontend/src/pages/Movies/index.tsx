@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ContainerPage, ListStyle, LineStyle, TitlePage } from '../../components/Main';
+import { ContainerPage, ListStyle, LineStyle, PathPage} from '../../components/Main';
 import { SpanMovie } from "./styled";
 
 const Page = () => {
@@ -41,6 +41,7 @@ const Page = () => {
 
     return (
         <ContainerPage>
+            <PathPage><Link to={"/"}>Home</Link> / Movies</PathPage>
             <ListStyle>
                 {movies.map(mov => {
                     return (

@@ -2,6 +2,40 @@ import styled from 'styled-components';
 
 export const ContainerPage = styled.div`
     padding: 3px 20px;
+
+    .buttonCollection {
+        width: 200px;
+        font-family: Franklin Gothic;
+        background-color: #DBA90D;
+        color: black;
+        display: inline;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:hover{
+            background-color: white;
+        }
+    }
+`;
+
+export const PathPage = styled.h1`
+    font-family: Arial;
+    padding: 25px;
+    color: gray;
+    font-size: 20px;
+    font-family: Courier New, monospace;
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    a:hover {
+        color: #DBA90D;
+    }
 `;
 
 export const TitlePage = styled.h1`
@@ -16,7 +50,7 @@ export const TitlePage = styled.h1`
     }
 
     .display-one {
-        margin-left: 15%;
+        margin-left: 25px;
         font-size: 35px;
         font-family: Courier New, monospace;
         font-style: normal;
@@ -44,6 +78,8 @@ export const LineStyle = styled.li`
         width: 100%;
         border-radius: 16px;
         margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
     }
 
     span {
@@ -54,11 +90,7 @@ export const LineStyle = styled.li`
         font-family: Franklin Gothic;
     }
 
-    a {
-        transition: all 0.3s;
-    }
-
-    a:hover {
+    img:hover {
         transform: scale(1.1);
     }
 

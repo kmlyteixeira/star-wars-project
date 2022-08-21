@@ -43,9 +43,15 @@ export const PopupDiv = styled.div`
     left: 25%;
     width: 50%;
     height: 80%;
-    background-color: #4E0000;
+    background-image: linear-gradient(to top, #020004, #4E0000);
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
 
     display: column;
     justify-content: center;
@@ -95,13 +101,20 @@ export const PopupText = styled.p`
 
 export const PopupList = styled.ul`
     list-style: none;
-    padding: 20px;
+    flex: 1;
 `;
 
 export const PopupListItem = styled.li`
     font-size: 18px;
     font-family: Franklin Gothic;
     line-height: 2.0;
+`;
+
+export const PopupListInfo = styled.li`
+    font-size: 18px;
+    font-family: Franklin Gothic;
+    line-height: 2.0;
+    color: #DBA90D;
 `;
 
 export const ListDiv = styled.div`

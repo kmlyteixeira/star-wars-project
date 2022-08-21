@@ -1,9 +1,8 @@
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
-import { ContainerPage } from "../../../components/Main"
-import { BtnDefault } from "../../../components/Styled";
+import { ContainerPage, TitlePage, PathPage } from "../../../components/Main"
 import { MOVIES_QUERY } from "../../../querys";
-import { DetailsList, SpanMovie, SpanOpening, DivVideo, GifIcon} from "../styled";
+import { DetailsList, DetailsListAux, ListVideo, LineVideo, DetailsLine, DetailsLineAux, DetailsLineImg} from "../styled";
 import { Link } from "react-router-dom";
 import { client } from "../../../services/apollo.ts";
 import ReactPlayer from "react-player";
@@ -59,27 +58,42 @@ export default function Details() {
 
     return (
         <ContainerPage>
-            <DetailsList>
-                {details.map((det) => {
-                    return (
-                        <>
-                            <li>
-                                <img src={det.image}></img>
-                                <SpanOpening>
-                                    <SpanMovie>{det.title}</SpanMovie><br /><br />
-                                    {det.openingCrawl}<br /><br />
-                                    <SpanMovie>Director: {det.director}</SpanMovie><br /><br />
-                                    <Link to={`/addcollection/${det.id}`}><BtnDefault className="buttonCollection">Add to my Collection</BtnDefault></Link>
-                                </SpanOpening>
-                            </li>
-                            <DivVideo>
-                                <SpanMovie>MEMORABLE SCENES</SpanMovie><GifIcon src="../../../saber.gif"></GifIcon>
-                                <ReactPlayer url={det.video}></ReactPlayer>
-                            </DivVideo>
-                        </>
-                    )
-                })}
-            </DetailsList>
+            {details.map((det) => {
+                return (
+                    <>
+                        <PathPage><Link to={"/"}>Home</Link> / <Link to={"/"}>Movies</Link> / {det.title}</PathPage>
+                        <TitlePage>
+                            <h2 className="display-one">{det.title}: <span className="text-aux">Episode {det.episodeID}</span></h2>
+                        </TitlePage>
+                            <DetailsList>
+                                <DetailsLineImg src={det.image}></DetailsLineImg>
+                                <DetailsListAux>
+                                    <DetailsLine>{det.openingCrawl}</DetailsLine>
+                                    <DetailsLine>Director: {det.director}</DetailsLine>
+                                    <DetailsList>
+                                        <DetailsLineAux>
+                                            <img src="../../../images/deathstar.png"></img>
+                                            <Link to="/vehicles"><button>...</button></Link>
+                                        </DetailsLineAux>
+                                        <DetailsLineAux>
+                                            <img src="../../../images/yoda.png"></img>
+                                            <img src="../../../images/luke.png"></img>
+                                            <Link to="/characters"><button>...</button></Link>
+                                        </DetailsLineAux>
+                                        <DetailsLineAux>
+                                            <img src="../../../images/ald.jpg"></img>
+                                            <Link to="/planets"><button>...</button></Link>
+                                        </DetailsLineAux>
+                                    </DetailsList>
+                                </DetailsListAux>
+                            </DetailsList>
+                        <ListVideo>
+                            <LineVideo>MEMORABLE SCENES <img src="../../../saber.gif"></img></LineVideo>
+                            <LineVideo><ReactPlayer url={det.video} playing={false} /></LineVideo>
+                        </ListVideo>
+                    </>
+                )
+            })}
         </ContainerPage>
     )
 }
