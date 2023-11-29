@@ -1,9 +1,9 @@
-import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server';
 import path from 'path';
+import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
-import { MovieResolver } from './src/resolvers/MovieResolver';
 import { CharactersResolver } from './src/resolvers/CharactersResolver';
+import { MovieResolver } from './src/resolvers/MovieResolver';
 
 async function main() {
     const schema = await buildSchema({
@@ -20,7 +20,7 @@ async function main() {
 
     const { url } = await server.listen()
 
-    console.log(`Server is running on ${url}`);
+    console.log(`Server is running on ${url}`); 
 }
 
 main();

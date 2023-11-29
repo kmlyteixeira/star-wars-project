@@ -9,7 +9,7 @@ Uma das maiores franquias do mundo cinematográfico, Star Wars vem cativando fã
 🤖 <a href="https://studio.apollographql.com/public/star-wars-swapi/home?variant=current">Star Wars GraphQL API<a/>  
 ⚔️ <a href="https://github.com/akabab/starwars-api">StarWars characters open-source REST API<a/>  
 # 
-#### INICIALIZANDO O AMBIENTE
+#### INICIALIZANDO O AMBIENTE 
 ```npm install```  
 backend: ```npm run dev```  
 frontend: ```npm start```  
